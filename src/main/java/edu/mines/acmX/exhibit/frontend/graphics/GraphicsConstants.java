@@ -14,11 +14,11 @@ public final class GraphicsConstants {
     public static final double SCALE_FACTOR = 0.65;
     
     public static int getScaledX(int x) {
-    	return (int) SCALE_FACTOR * x;
+    	return (int) Math.round(SCALE_FACTOR * x);
     }
     
     public static int getScaledY(int y) {
-    	return (int) SCALE_FACTOR * y;
+    	return (int) Math.round(SCALE_FACTOR * y);
     }
 
 }

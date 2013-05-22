@@ -103,6 +103,7 @@ implements Destroyable, Runnable {
   public synchronized void installInputDriver(InputDriver driver) {
     driver.installInto(this.getFrame());
     inputDrivers.add(driver);
+    inputStatus.pointers = driver.getPointers();
   }
 
   /**
@@ -139,8 +140,10 @@ implements Destroyable, Runnable {
       synchronized (this) {
         //Handle inputs
         if (state != null) {
-          for (InputDriver driver: inputDrivers)
+          for (InputDriver driver: inputDrivers) {
             driver.pumpInput(state);
+            inputStatus.pointers = driver.getPointers();
+          }
         }
       }
     }
@@ -153,7 +156,8 @@ implements Destroyable, Runnable {
    * any N) will be square on the display (assuming square pixels).
    */
   public final float vheight() {
-    return frame.getHeight() / (float)frame.getWidth();
+	return frame.getHeight();
+    //return frame.getHeight() / (float)frame.getWidth();
   }
 
   /**

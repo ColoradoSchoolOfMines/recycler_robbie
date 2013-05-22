@@ -31,8 +31,12 @@ public class PlayerHand extends Hand {
 
 	@Override
 	public Coordinate getNextPosition() {
-        int x = gameManager.vcxtopx(gameManager.getSharedInputStatus().pointers[handNum][0]);
-        int y = gameManager.vcytopx(gameManager.getSharedInputStatus().pointers[handNum][1]);
+        //int x = gameManager.vcxtopx(gameManager.getSharedInputStatus().pointers[handNum][0]);
+        //int y = gameManager.vcytopx(gameManager.getSharedInputStatus().pointers[handNum][1]);
+		
+		int x = (int) gameManager.getSharedInputStatus().pointers[handNum][0];
+		int y = (int) gameManager.getSharedInputStatus().pointers[handNum][1];
+		
 
         //The input is different for the display so we must account for the scale factor
         //For example if we have a monitor that is half as tall and half as wide as a 1080p monitor

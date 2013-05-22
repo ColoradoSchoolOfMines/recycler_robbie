@@ -76,7 +76,7 @@ public class ComputerPlayer {
      * Creates a new ComputerPlayer complete with artificial intelligence
      * @param recycleBins
      */
-    public ComputerPlayer(edu.mines.acmX.exhibit.frontend.RecycleBins recycleBins) {
+    public ComputerPlayer(RecycleBins recycleBins) {
         logger.setLevel(Level.INFO);
         logger.debug("Second player is a computer");
         primary = new ComputerHand();
@@ -134,6 +134,7 @@ public class ComputerPlayer {
                 followPath(currentTimeSec);
             }
         }
+        System.out.println("Computer Hand @ (" + primary.getX() + ", " +primary.getY() + ")");
     }
 
     /**

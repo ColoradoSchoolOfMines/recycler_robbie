@@ -20,6 +20,6 @@ public final class InputStatus {
      * An X coordinate of -1 indicates that that pointer is not currently
      * meaningful.
      */
-    public final float pointers[][] = new float[][] {{-1,-1}, {-1,-1},
+    public float pointers[][] = new float[][] {{-1,-1}, {-1,-1},
         {-1,-1}, {-1,-1}};
 }

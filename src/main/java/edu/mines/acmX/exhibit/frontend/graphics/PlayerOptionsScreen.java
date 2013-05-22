@@ -85,7 +85,7 @@ public class PlayerOptionsScreen {
             int y = (int) Math.round(hand.getY() * GraphicsConstants.SCALE_FACTOR);
             //If it is negative one it is a sentinel for it not existing so ignore.
             if (hand.getX() > -1) {
-            	Image img = ResourceManager.getInstance().getImage(background.getImageFilename());
+            	Image img = ResourceManager.getInstance().getImage(hand.getImageFilename());
                 g2d.drawImage(img, x, y, canvas);
             }
         }
