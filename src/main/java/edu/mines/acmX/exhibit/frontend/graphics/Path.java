@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
+
 /**
  * A Path is a representation of the path an item is to follow on the screen. It consists
  * of a list of Lines.  Lines on the path should *not* intersect or figuring out which

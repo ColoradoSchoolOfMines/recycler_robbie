@@ -2,8 +2,8 @@ package edu.mines.acmX.exhibit.frontend;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.csci598.recycler.frontend.graphics.GameScreen;
-import edu.mines.csci598.recycler.frontend.graphics.Sprite;
+import edu.mines.acmX.exhibit.frontend.graphics.GameScreen;
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,14 +1,20 @@
 package edu.mines.acmX.exhibit.frontend.graphics;
 
-import edu.mines.csci598.recycler.backend.GameManager;
-import edu.mines.csci598.recycler.frontend.hands.Hand;
-import edu.mines.csci598.recycler.frontend.hands.PlayerHand;
-import edu.mines.csci598.recycler.frontend.utils.PlayerMode;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
-import java.awt.*;
-import java.util.*;
-import java.util.List;
+import edu.mines.acmX.exhibit.backend.GameManager;
+import edu.mines.acmX.exhibit.frontend.hands.Hand;
+import edu.mines.acmX.exhibit.frontend.hands.PlayerHand;
+import edu.mines.acmX.exhibit.frontend.utils.PlayerMode;
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
 
 public class PlayerOptionsScreen {
 
@@ -36,7 +42,6 @@ public class PlayerOptionsScreen {
         textSpriteHolders = new ArrayList<TextSpritesHolder>();
 
         TextSpritesHolder holder = new TextSpritesHolder() {
-            @Override
             public List<TextSprite> getTextSprites() {
                 Font f = new Font("Stencil", Font.BOLD, 100);
                 Color c = Color.green;
@@ -52,7 +57,8 @@ public class PlayerOptionsScreen {
     }
 
     public void paint(Graphics2D g2d, Component canvas) {
-        g2d.drawImage(background.getImage(), background.getX(), background.getY(), canvas);
+    	Image img = ResourceManager.getInstance().getImage(background.getImageFilename());
+        g2d.drawImage(img, background.getX(), background.getY(), canvas);
         drawTextSprites(g2d);
         drawHands(g2d, canvas);
     }
@@ -79,7 +85,8 @@ public class PlayerOptionsScreen {
             int y = (int) Math.round(hand.getY() * GraphicsConstants.SCALE_FACTOR);
             //If it is negative one it is a sentinel for it not existing so ignore.
             if (hand.getX() > -1) {
-                g2d.drawImage(hand.getImage(), x, y, canvas);
+            	Image img = ResourceManager.getInstance().getImage(background.getImageFilename());
+                g2d.drawImage(img, x, y, canvas);
             }
         }
     }

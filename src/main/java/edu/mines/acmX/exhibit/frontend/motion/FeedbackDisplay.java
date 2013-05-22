@@ -1,13 +1,14 @@
 package edu.mines.acmX.exhibit.frontend.motion;
 
-import edu.mines.csci598.recycler.frontend.graphics.GameScreen;
-import edu.mines.csci598.recycler.frontend.graphics.Line;
-import edu.mines.csci598.recycler.frontend.graphics.Path;
-import edu.mines.csci598.recycler.frontend.graphics.ResourceManager;
-import edu.mines.csci598.recycler.frontend.items.BinFeedback;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
-import java.util.List;
+import edu.mines.acmX.exhibit.frontend.graphics.GameScreen;
+import edu.mines.acmX.exhibit.frontend.graphics.Line;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.graphics.ResourceManager;
+import edu.mines.acmX.exhibit.frontend.items.BinFeedback;
 
 /**
  * This class is an easy way to show a checkmark or x just pass in the

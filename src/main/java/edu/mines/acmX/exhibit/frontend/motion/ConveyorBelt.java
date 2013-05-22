@@ -1,15 +1,16 @@
 package edu.mines.acmX.exhibit.frontend.motion;
 
-import edu.mines.csci598.recycler.frontend.GameLogic;
-import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
-import edu.mines.csci598.recycler.frontend.graphics.GameScreen;
-import edu.mines.csci598.recycler.frontend.graphics.Line;
-import edu.mines.csci598.recycler.frontend.graphics.Path;
-import edu.mines.csci598.recycler.frontend.items.MotionState;
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import org.apache.log4j.Logger;
+
+import edu.mines.acmX.exhibit.frontend.GameLogic;
+import edu.mines.acmX.exhibit.frontend.graphics.GameScreen;
+import edu.mines.acmX.exhibit.frontend.graphics.Line;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.items.MotionState;
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
 
 public class ConveyorBelt extends ItemMover {
     private static final Logger logger = Logger.getLogger(ConveyorBelt.class);

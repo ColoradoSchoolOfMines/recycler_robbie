@@ -76,7 +76,6 @@ implements Destroyable, Runnable {
 
   }
 
-  @Override
   public void destroy() {
     for (WeakReference<Destroyable> wd: resources) {
       Destroyable d = wd.get();
@@ -102,7 +101,7 @@ implements Destroyable, Runnable {
    * Installs the given InputDriver into this GameManager.
    */
   public synchronized void installInputDriver(InputDriver driver) {
-    driver.installInto(this);
+    driver.installInto(this.getFrame());
     inputDrivers.add(driver);
   }
 

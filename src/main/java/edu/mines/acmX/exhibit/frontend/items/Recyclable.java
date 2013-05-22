@@ -1,15 +1,19 @@
 package edu.mines.acmX.exhibit.frontend.items;
 
-import edu.mines.csci598.recycler.frontend.utils.GameConstants;
-import edu.mines.csci598.recycler.frontend.RecycleBin;
-import edu.mines.csci598.recycler.frontend.RecycleBins;
-import edu.mines.csci598.recycler.frontend.graphics.*;
-import edu.mines.csci598.recycler.frontend.hands.Hand;
-import edu.mines.csci598.recycler.frontend.motion.Movable;
+import java.util.Random;
+
 import org.apache.log4j.Logger;
 
-
-import java.util.Random;
+import edu.mines.acmX.exhibit.frontend.RecycleBin;
+import edu.mines.acmX.exhibit.frontend.RecycleBins;
+import edu.mines.acmX.exhibit.frontend.graphics.Displayable;
+import edu.mines.acmX.exhibit.frontend.graphics.Line;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.hands.Hand;
+import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
 
 /**
  * Recyclables are things like bottles, plastic etc. that you would be swiping at.
@@ -46,7 +50,6 @@ public class Recyclable implements Displayable, Movable {
      * @param hand
      * @param currentTimeSec
      */
-    @Override
     public void reactToCollision(Hand hand, double currentTimeSec) {
         if (!(this instanceof Recyclable)) {
             throw new IllegalStateException("Trying to react to Recyclable collision with a non-Recyclable!");
@@ -92,7 +95,16 @@ public class Recyclable implements Displayable, Movable {
      * @return - true if there is a collision, false otherwise
      */
     public boolean collidesWithPoint(Coordinate point) {
-        return sprite.isPointInside((int) point.getX(), (int) point.getY());
+        int x = (int) point.getX();
+        int y = (int) point.getY();
+        if (x >= sprite.getX() - (GameConstants.SPRITE_X_OFFSET) &&
+            x <= sprite.getX() + GameConstants.SPRITE_X_OFFSET) {
+                if (y >= sprite.getY() - (GameConstants.SPRITE_Y_OFFSET) &&
+                    y <= sprite.getY() + (GameConstants.SPRITE_Y_OFFSET)) {
+                        return true;
+                }
+        }
+        return false;
     }
 
     /**
@@ -107,17 +119,14 @@ public class Recyclable implements Displayable, Movable {
      * Determines if Recyclable can be removed from screen when its path is done
      * @return true if it's okay to remove, false otherwise
      */
-    @Override
     public boolean isRemovable() {
         return removable;
     }
 
-    @Override
     public void setRemovable(boolean state) {
         removable = state;
     }
 
-    @Override
     public Sprite getSprite() {
         return sprite;
     }
@@ -126,17 +135,14 @@ public class Recyclable implements Displayable, Movable {
         return type;
     }
 
-    @Override
     public MotionState getMotionState() {
         return currentMotion;
     }
 
-    @Override
     public void setMotionState(MotionState motion) {
         this.currentMotion = motion;
     }
 
-    @Override
     public Path getPath() {
     	return path;
     }

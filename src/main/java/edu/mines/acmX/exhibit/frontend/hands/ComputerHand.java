@@ -3,10 +3,10 @@ package edu.mines.acmX.exhibit.frontend.hands;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import edu.mines.csci598.recycler.frontend.ai.ComputerConstants;
-import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
-import edu.mines.csci598.recycler.frontend.graphics.Path;
-import edu.mines.csci598.recycler.frontend.motion.ConveyorBelt;
+import edu.mines.acmX.exhibit.frontend.ai.ComputerConstants;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
 
 /**
  * Created with IntelliJ IDEA.

@@ -2,6 +2,9 @@ package edu.mines.acmX.exhibit.backend;
 
 import java.awt.*;
 
+import edu.mines.acmX.exhibit.input_services.InputEvent;
+import edu.mines.acmX.exhibit.input_services.InputReceiver;
+
 /**
  * Encapsulates a "state" of the game.
  *
@@ -70,7 +73,6 @@ public abstract class GameState implements InputReceiver {
      */
     protected abstract void drawThis(Graphics2D g);
 
-    @Override
     public void receiveInput(InputEvent e) {
         if (subState != null)
             subState.receiveInput(e);

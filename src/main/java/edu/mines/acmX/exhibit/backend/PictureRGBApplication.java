@@ -5,9 +5,11 @@ TODO: Make this one of thos emini modules on friday 24
 package edu.mines.acmX.exhibit.backend;
 
 import javax.swing.*;
+
+import edu.mines.acmX.exhibit.stdlib.input_processing.imaging.PictureRGB;
+
 import java.awt.image.BufferedImage;
 import java.awt.*;
-import java.awt.Graphics;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -17,7 +19,7 @@ public class PictureRGBApplication extends JPanel {
     BufferedImage img;
     public PictureRGBApplication() {
         prgb = new PictureRGB();
-        img = prgb.getPicture();
+        //img = prgb.getPicture();
     }
 
     public void paintComponent(Graphics g) {

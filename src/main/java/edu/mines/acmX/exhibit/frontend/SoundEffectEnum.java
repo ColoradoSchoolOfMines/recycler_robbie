@@ -2,7 +2,7 @@ package edu.mines.acmX.exhibit.frontend;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.csci598.recycler.bettyCrocker.SoundEffect;
+import edu.mines.acmX.exhibit.bettyCrocker.SoundEffect;
 
 /**
  * Created with IntelliJ IDEA.

@@ -2,12 +2,13 @@ package edu.mines.acmX.exhibit.frontend.items;
 
 import java.util.Random;
 
-import edu.mines.csci598.recycler.frontend.RecycleBins;
 import org.apache.log4j.Logger;
 
-import edu.mines.csci598.recycler.frontend.utils.GameConstants;
-import edu.mines.csci598.recycler.frontend.graphics.Path;
-import edu.mines.csci598.recycler.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.RecycleBins;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
+
 
 /**
  * A factory to create Recyclables

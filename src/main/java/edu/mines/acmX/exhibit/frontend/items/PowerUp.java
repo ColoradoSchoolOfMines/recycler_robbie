@@ -1,11 +1,19 @@
 package edu.mines.acmX.exhibit.frontend.items;
 
+import java.awt.geom.Point2D;
 
-import edu.mines.csci598.recycler.frontend.graphics.*;
 import org.apache.log4j.Logger;
 
-import edu.mines.csci598.recycler.frontend.hands.Hand;
-import edu.mines.csci598.recycler.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.graphics.Displayable;
+import edu.mines.acmX.exhibit.frontend.graphics.Line;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.graphics.ResourceManager;
+import edu.mines.acmX.exhibit.frontend.hands.Hand;
+import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,7 +47,6 @@ public class PowerUp implements Displayable, Movable {
      * @param hand
      * @param currentTimeSec
      */
-    @Override
     public void reactToCollision(Hand hand, double currentTimeSec) {
         if (!(this instanceof PowerUp)) {
             throw new IllegalStateException("Trying to react to PowerUp collision with a non-PowerUp!");
@@ -58,16 +65,23 @@ public class PowerUp implements Displayable, Movable {
      * @param point
      * @return
      */
-    @Override
     public boolean collidesWithPoint(Coordinate point) {
-        return sprite.isPointInside((int) point.getX(), (int) point.getY());
+        int x = (int) point.getX();
+        int y = (int) point.getY();
+        if (x >= sprite.getX() - (GameConstants.SPRITE_X_OFFSET) &&
+            x <= sprite.getX() + GameConstants.SPRITE_X_OFFSET) {
+                if (y >= sprite.getY() - (GameConstants.SPRITE_Y_OFFSET) &&
+                    y <= sprite.getY() + (GameConstants.SPRITE_Y_OFFSET)) {
+                        return true;
+                }
+        }
+        return false;
     }
 
     /**
      * Determines if the power up should be touched by a hand
      * @return true if power up can be touched, false otherwise
      */
-    @Override
     public boolean isTouchable() {
         return motionState.isTouchable();
     }
@@ -77,7 +91,6 @@ public class PowerUp implements Displayable, Movable {
      *
      * @return true if it's okay to remove, false otherwise
      */
-    @Override
     public boolean isRemovable() {
         return removable;
     }
@@ -86,17 +99,14 @@ public class PowerUp implements Displayable, Movable {
         this.removable = removable;
     }
 
-    @Override
     public Sprite getSprite() {
         return sprite;
     }
 
-    @Override
     public Path getPath() {
         return path;
     }
 
-    @Override
     public void setPath(Path path) {
         this.path = path;
     }
@@ -105,17 +115,14 @@ public class PowerUp implements Displayable, Movable {
         return sprite.getPosition();
     }
 
-    @Override
     public void setPosition(Coordinate position) {
         sprite.setPosition(position);
     }
 
-    @Override
     public MotionState getMotionState() {
         return motionState;
     }
 
-    @Override
     public void setMotionState(MotionState state) {
         motionState = state;
     }

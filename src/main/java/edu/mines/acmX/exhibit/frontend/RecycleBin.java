@@ -2,11 +2,11 @@ package edu.mines.acmX.exhibit.frontend;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.csci598.recycler.frontend.graphics.Displayable;
-import edu.mines.csci598.recycler.frontend.graphics.Sprite;
-import edu.mines.csci598.recycler.frontend.items.Recyclable;
-import edu.mines.csci598.recycler.frontend.items.RecyclableType;
-import edu.mines.csci598.recycler.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.graphics.Displayable;
+import edu.mines.acmX.exhibit.frontend.items.Recyclable;
+import edu.mines.acmX.exhibit.frontend.items.RecyclableType;
+import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
 
 /**
  * This is a representation of invisible "bins" where you knock the recyclables into.
@@ -130,7 +130,6 @@ public class RecycleBin implements Displayable {
         return comboBonus;
     }
 
-    @Override
     public Sprite getSprite() {
         return sprite;
     }

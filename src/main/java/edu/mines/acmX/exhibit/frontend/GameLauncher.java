@@ -9,6 +9,7 @@ import edu.mines.acmX.exhibit.backend.GameState;
 import edu.mines.acmX.exhibit.frontend.graphics.GameScreen;
 import edu.mines.acmX.exhibit.frontend.graphics.InstructionScreen;
 import edu.mines.acmX.exhibit.frontend.graphics.PlayerOptionsScreen;
+import edu.mines.acmX.exhibit.frontend.hands.Hand;
 import edu.mines.acmX.exhibit.frontend.hands.PlayerHand;
 import edu.mines.acmX.exhibit.frontend.items.PowerUp;
 import edu.mines.acmX.exhibit.frontend.items.RecyclableType;
@@ -17,7 +18,6 @@ import edu.mines.acmX.exhibit.frontend.motion.FeedbackDisplay;
 import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
 import edu.mines.acmX.exhibit.frontend.utils.PlayerMode;
 import edu.mines.acmX.exhibit.input_services.mouse.ModalMouseMotionInputDriver;
-import edu.mines.acmX.exhibit.stdlib.input_processing.tracking.Hand;
 import edu.mines.acmX.exhibit.stdlib.sound.Song;
 import edu.mines.acmX.exhibit.stdlib.sound.Track;
 
@@ -71,7 +71,7 @@ public class GameLauncher extends GameState {
 
         song = new Song();
 				System.out.println("LOADING A SONG!");
-        song.addTrack(new Track(SONG_FILENAME));
+        //song.addTrack(new Track(SONG_FILENAME));
         song.setLooping(true);
         song.startPlaying();
 

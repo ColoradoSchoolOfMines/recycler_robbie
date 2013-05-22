@@ -1,21 +1,21 @@
 package edu.mines.acmX.exhibit.frontend;
 
-import edu.mines.csci598.recycler.frontend.ai.ComputerPlayer;
-import edu.mines.csci598.recycler.frontend.graphics.GameScreen;
-import edu.mines.csci598.recycler.frontend.graphics.Path;
-import edu.mines.csci598.recycler.frontend.hands.Hand;
-import edu.mines.csci598.recycler.frontend.items.ItemFactory;
-import edu.mines.csci598.recycler.frontend.items.PowerUp;
-import edu.mines.csci598.recycler.frontend.items.Recyclable;
-import edu.mines.csci598.recycler.frontend.motion.ConveyorBelt;
-import edu.mines.csci598.recycler.frontend.motion.FeedbackDisplay;
-import edu.mines.csci598.recycler.frontend.motion.Movable;
-import edu.mines.csci598.recycler.frontend.motion.TheForce;
-import edu.mines.csci598.recycler.frontend.utils.GameConstants;
-import edu.mines.csci598.recycler.splashscreen.highscores.SavePlayer;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
-import java.util.List;
+import edu.mines.acmX.exhibit.frontend.ai.ComputerPlayer;
+import edu.mines.acmX.exhibit.frontend.graphics.GameScreen;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.hands.Hand;
+import edu.mines.acmX.exhibit.frontend.items.ItemFactory;
+import edu.mines.acmX.exhibit.frontend.items.PowerUp;
+import edu.mines.acmX.exhibit.frontend.items.Recyclable;
+import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
+import edu.mines.acmX.exhibit.frontend.motion.FeedbackDisplay;
+import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.motion.TheForce;
+import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
 
 /**
  * The GameLogic is where the game play logic is. The main game update loop will go here.
@@ -182,15 +182,7 @@ public class GameLogic {
                 Movable feedback[] = feedbackDisplay.makeDisplay(movableRecyclable, currentTimeSec, false);
                 Boolean barFull = strikeBar.addStrike(feedback);
                 if(barFull){
-                    if (!playerIsAComputer){
-                      if (!scoreSubmitted){
-                          SavePlayer currentPlayer = new SavePlayer();
-                          currentPlayer.submitPlayerScore(gameStatusDisplay.getScore());
-                          scoreSubmitted = true;
-                      }
-                    }
                     isPlaying = false;
-
                 }
                 SoundEffectEnum.INCORRECT.playSound();
             }

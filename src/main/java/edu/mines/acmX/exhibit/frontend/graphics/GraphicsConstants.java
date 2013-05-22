@@ -12,5 +12,13 @@ public final class GraphicsConstants {
      *  Determines how the entire game will be scaled graphically
      */
     public static final double SCALE_FACTOR = 0.65;
+    
+    public static int getScaledX(int x) {
+    	return (int) SCALE_FACTOR * x;
+    }
+    
+    public static int getScaledY(int y) {
+    	return (int) SCALE_FACTOR * y;
+    }
 
 }

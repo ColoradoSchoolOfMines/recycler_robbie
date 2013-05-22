@@ -1,10 +1,11 @@
 package edu.mines.acmX.exhibit.frontend.motion;
 
-import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
-import edu.mines.csci598.recycler.frontend.graphics.Path;
-import edu.mines.csci598.recycler.frontend.graphics.Sprite;
-import edu.mines.csci598.recycler.frontend.hands.Hand;
-import edu.mines.csci598.recycler.frontend.items.MotionState;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.hands.Hand;
+import edu.mines.acmX.exhibit.frontend.items.MotionState;
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +19,7 @@ public interface Movable {
    public void setPath(Path p);
 
    public Coordinate getPosition();
-   public void setPosition(Coordinate position);
+   public void setPosition(Coordinate loc);
 
    public boolean isRemovable();
    public void setRemovable(boolean removable);

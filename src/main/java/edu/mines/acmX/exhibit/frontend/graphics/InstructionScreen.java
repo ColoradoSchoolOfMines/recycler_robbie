@@ -2,8 +2,11 @@ package edu.mines.acmX.exhibit.frontend.graphics;
 
 import java.awt.Component;
 import java.awt.Graphics2D;
+import java.awt.Image;
 
 import org.apache.log4j.Logger;
+
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
 
 
 /**
@@ -25,7 +28,8 @@ public class InstructionScreen {
     }
 
     public void paint(Graphics2D g2d, Component canvas) {
-        g2d.drawImage(background.getImage(), background.getX(), background.getY(), canvas);
+    	Image img = ResourceManager.getInstance().getImage(background.getImageFilename());
+        g2d.drawImage(img, background.getX(), background.getY(), canvas);
     }
 
 }

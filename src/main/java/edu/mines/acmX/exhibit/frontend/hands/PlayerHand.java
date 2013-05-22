@@ -2,9 +2,10 @@ package edu.mines.acmX.exhibit.frontend.hands;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.csci598.recycler.backend.GameManager;
-import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
-import edu.mines.csci598.recycler.frontend.graphics.GraphicsConstants;
+import edu.mines.acmX.exhibit.backend.GameManager;
+import edu.mines.acmX.exhibit.frontend.graphics.GraphicsConstants;
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
+
 
 /**
  * The "hand" represents a user's hand. It can be displayed on the screen and its motion will

@@ -1,10 +1,14 @@
 package edu.mines.acmX.exhibit.frontend.graphics;
 
-import org.apache.log4j.Logger;
-
-import java.awt.*;
+import java.awt.Component;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.util.ArrayList;
 import java.util.LinkedList;
+
+import org.apache.log4j.Logger;
+
+import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
 
 /**
  * The GameScreen singleton class is responsible for drawing the sprites.
@@ -84,28 +88,29 @@ public class GameScreen {
     }
 
     public void paint(Graphics2D g2d, Component canvas) {
+    	ResourceManager rscMgr = ResourceManager.getInstance();
         synchronized (backgroundToDraw) {
-            g2d.drawImage(backgroundToDraw.getImage(), backgroundToDraw.getX(), backgroundToDraw.getY(), canvas);
+            g2d.drawImage(rscMgr.getImage(backgroundToDraw.getImageFilename()), backgroundToDraw.getX(), backgroundToDraw.getY(), canvas);
         }
 
         for (Sprite bin : recycleBinSprites) {
-            g2d.drawImage(bin.getImage(), bin.getScaledX(), bin.getScaledY(), canvas);
+            g2d.drawImage(rscMgr.getImage(bin.getImageFilename()), GraphicsConstants.getScaledX(bin.getX()), GraphicsConstants.getScaledY(bin.getY()), canvas);
         }
 
-        g2d.drawImage(backgroundScoreFrame.getImage(), backgroundScoreFrame.getX(), backgroundScoreFrame.getY(), canvas);
+        g2d.drawImage(rscMgr.getImage(backgroundScoreFrame.getImageFilename()), backgroundScoreFrame.getX(), backgroundScoreFrame.getY(), canvas);
 
         for (Sprite sprite : sprites) {
-            int offset = (int) (GraphicsConstants.SCALE_FACTOR * 50);
-            g2d.rotate(sprite.getPosition().getRotation(), sprite.getScaledX() + offset, sprite.getScaledY() + offset);
-            g2d.drawImage(sprite.getImage(), sprite.getScaledX(), sprite.getScaledY(), canvas);
-            g2d.rotate(-1.0 * sprite.getPosition().getRotation(), sprite.getScaledX() + offset, sprite.getScaledY() + offset);
+            int offset = (int) (GraphicsConstants.getScaledX(50));
+            g2d.rotate(sprite.getPosition().getRotation(), (int) GraphicsConstants.getScaledX(sprite.getX()) + offset, GraphicsConstants.getScaledY(sprite.getY()) + offset);
+            g2d.drawImage(rscMgr.getImage(sprite.getImageFilename()), GraphicsConstants.getScaledX(sprite.getX()), GraphicsConstants.getScaledY(sprite.getY()), canvas);
+            g2d.rotate(-1.0 * sprite.getPosition().getRotation(), GraphicsConstants.getScaledX(sprite.getX()) + offset, GraphicsConstants.getScaledY(sprite.getY()) + offset);
         }
 
         for(Sprite sprites: gameOverSprites){
-            g2d.drawImage(sprites.getImage(), sprites.getScaledX(), sprites.getScaledY(), canvas);
+            g2d.drawImage(rscMgr.getImage(sprites.getImageFilename()), GraphicsConstants.getScaledX(sprites.getX()), GraphicsConstants.getScaledY(sprites.getY()), canvas);
         }
 
-        g2d.drawImage(backgroundChutesAndFrame.getImage(), backgroundChutesAndFrame.getX(), backgroundChutesAndFrame.getY(), canvas);
+        g2d.drawImage(rscMgr.getImage(backgroundChutesAndFrame.getImageFilename()), backgroundChutesAndFrame.getX(), backgroundChutesAndFrame.getY(), canvas);
 
         drawHands(g2d, canvas);
         drawTextSprites(g2d);
@@ -149,7 +154,8 @@ public class GameScreen {
             int y = (int) Math.round(hand.getY() * GraphicsConstants.SCALE_FACTOR);
             //If it is negative one it is a sentinel for it not existing so ignore.
             if (hand.getX() > -1) {
-                g2d.drawImage(hand.getImage(), x, y, canvas);
+            	Image img = ResourceManager.getInstance().getImage(hand.getImageFilename());
+                g2d.drawImage(img, x, y, canvas);
             }
         }
     }
@@ -174,13 +180,15 @@ public class GameScreen {
      * Preloads all of the gameScreen images so that they are ready to be used
      */
     public void preLoadImages() {
-        background1.getImage();
-        background2.getImage();
-        backgroundChutesAndFrame.getImage();
-        backgroundScoreFrame.getImage();
+    	ResourceManager rscMgr = ResourceManager.getInstance();
+		rscMgr.getImage(background1.getImageFilename());
+		rscMgr.getImage(background2.getImageFilename());
+		rscMgr.getImage(backgroundChutesAndFrame.getImageFilename());
+		rscMgr.getImage(backgroundScoreFrame.getImageFilename());
 
         for (Sprite bin : recycleBinSprites) {
-            bin.getImage();
+        	
+            rscMgr.getImage(bin.getImageFilename());
         }
 
         String[] imagesToLoad =

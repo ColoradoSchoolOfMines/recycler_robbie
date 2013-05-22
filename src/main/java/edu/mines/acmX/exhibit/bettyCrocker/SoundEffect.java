@@ -60,7 +60,6 @@ public class SoundEffect {
 			clip.open(audioStream);
 		
 			clip.addLineListener( new LineListener() {
-				@Override
 				public void update(LineEvent evt) {
 					if (evt.getType() == LineEvent.Type.STOP) {
 				    evt.getLine().close();

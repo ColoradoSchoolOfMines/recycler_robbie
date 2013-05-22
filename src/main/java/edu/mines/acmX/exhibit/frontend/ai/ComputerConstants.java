@@ -1,6 +1,7 @@
 package edu.mines.acmX.exhibit.frontend.ai;
 
-import edu.mines.csci598.recycler.frontend.motion.ConveyorBelt;
+import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
+
 
 /**
  * Created with IntelliJ IDEA.

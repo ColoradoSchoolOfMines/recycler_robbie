@@ -1,10 +1,11 @@
 package edu.mines.acmX.exhibit.frontend.motion;
 
-import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
 
 /**
  * Manages a list of items and causes them to move on demand.

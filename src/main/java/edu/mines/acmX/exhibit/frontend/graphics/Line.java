@@ -5,6 +5,8 @@ import java.awt.geom.Rectangle2D;
 
 import org.apache.log4j.Logger;
 
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
+
 /**
  * A line is a part of a path. It has the starting location, the ending location, and the total time it takes
  * the line to be traversed.
@@ -48,7 +50,6 @@ public class Line extends Line2D{
         this.timeToComplete = timeToComplete;
     }
 
-	@Override
 	public Rectangle2D getBounds2D() {
 		return new Rectangle2D.Double(startPoint.getX(), startPoint.getY(), endPoint.getX() - startPoint.getX(), endPoint.getY() - startPoint.getY());
 	}

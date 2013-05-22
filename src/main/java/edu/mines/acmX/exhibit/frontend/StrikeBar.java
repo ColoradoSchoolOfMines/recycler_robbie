@@ -1,13 +1,14 @@
 package edu.mines.acmX.exhibit.frontend;
 
-import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
-import edu.mines.csci598.recycler.frontend.graphics.Line;
-import edu.mines.csci598.recycler.frontend.graphics.Path;
-import edu.mines.csci598.recycler.frontend.motion.Movable;
-import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import edu.mines.acmX.exhibit.frontend.graphics.Line;
+import edu.mines.acmX.exhibit.frontend.graphics.Path;
+import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
 
 /**
  * This class keeps track of how many strikes the user has had and keeps a drawing on the screen.
