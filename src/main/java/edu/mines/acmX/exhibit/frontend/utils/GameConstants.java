@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.utils;
+package edu.mines.acmX.exhibit.frontend.utils;
 
 /**
  * Created with IntelliJ IDEA.

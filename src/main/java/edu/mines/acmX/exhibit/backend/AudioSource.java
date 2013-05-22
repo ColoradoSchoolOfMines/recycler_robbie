@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.backend;
+package edu.mines.acmX.exhibit.backend;
 
 /**
  * Represents a source of audio data, conforming to AudioPlayer.FORMAT.

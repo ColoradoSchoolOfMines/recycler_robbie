@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.items;
+package edu.mines.acmX.exhibit.frontend.items;
 
 import edu.mines.csci598.recycler.frontend.SoundEffectEnum;
 import org.apache.log4j.Logger;

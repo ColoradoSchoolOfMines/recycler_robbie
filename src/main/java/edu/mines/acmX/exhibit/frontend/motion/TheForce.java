@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.motion;
+package edu.mines.acmX.exhibit.frontend.motion;
 
 import org.apache.log4j.Logger;
 

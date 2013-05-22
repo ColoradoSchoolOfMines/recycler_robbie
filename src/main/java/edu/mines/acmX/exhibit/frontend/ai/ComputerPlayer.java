@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.ai;
+package edu.mines.acmX.exhibit.frontend.ai;
 
 
 import java.util.Random;

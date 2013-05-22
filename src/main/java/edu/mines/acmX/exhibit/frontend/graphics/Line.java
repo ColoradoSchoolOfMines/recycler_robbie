@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.graphics;
+package edu.mines.acmX.exhibit.frontend.graphics;
 
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;

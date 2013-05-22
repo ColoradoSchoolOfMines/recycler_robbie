@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend;
+package edu.mines.acmX.exhibit.frontend;
 
 import java.util.LinkedList;
 import java.util.List;

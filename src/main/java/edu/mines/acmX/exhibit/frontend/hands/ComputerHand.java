@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.hands;
+package edu.mines.acmX.exhibit.frontend.hands;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;

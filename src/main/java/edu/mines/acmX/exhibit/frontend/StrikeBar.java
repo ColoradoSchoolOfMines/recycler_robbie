@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend;
+package edu.mines.acmX.exhibit.frontend;
 
 import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
 import edu.mines.csci598.recycler.frontend.graphics.Line;

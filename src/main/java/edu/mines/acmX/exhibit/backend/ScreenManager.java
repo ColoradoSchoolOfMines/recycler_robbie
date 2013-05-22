@@ -4,7 +4,7 @@
 	full screen functionality.
 */
 
-package edu.mines.csci598.recycler.backend;
+package edu.mines.acmX.exhibit.backend;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;

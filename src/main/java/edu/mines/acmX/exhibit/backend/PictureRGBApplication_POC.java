@@ -2,7 +2,7 @@
 TODO: Make this one of thos emini modules on friday 24
 */
 
-package edu.mines.csci598.recycler.backend;
+package edu.mines.acmX.exhibit.backend;
 
 import javax.swing.*;
 import java.awt.image.BufferedImage;

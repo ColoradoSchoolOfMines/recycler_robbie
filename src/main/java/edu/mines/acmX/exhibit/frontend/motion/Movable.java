@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.motion;
+package edu.mines.acmX.exhibit.frontend.motion;
 
 import edu.mines.csci598.recycler.frontend.graphics.Coordinate;
 import edu.mines.csci598.recycler.frontend.graphics.Path;

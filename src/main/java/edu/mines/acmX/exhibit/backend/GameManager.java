@@ -1,13 +1,20 @@
-package edu.mines.csci598.recycler.backend;
+package edu.mines.acmX.exhibit.backend;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Component;
+import java.awt.Frame;
+import java.awt.Graphics2D;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
+import java.lang.ref.WeakReference;
+import java.util.LinkedList;
+
 import javax.swing.JFrame;
 
-import java.io.Closeable;
-import java.util.LinkedList;
-import java.lang.ref.WeakReference;
+import edu.mines.acmX.exhibit.input_services.InputDriver;
+
 
 /**
  * The GameManager manages resources and system compatibility, and orchestrates

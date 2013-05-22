@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.motion;
+package edu.mines.acmX.exhibit.frontend.motion;
 
 import edu.mines.csci598.recycler.frontend.graphics.GameScreen;
 import edu.mines.csci598.recycler.frontend.graphics.Line;

@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.backend;
+package edu.mines.acmX.exhibit.backend;
 
 /**
  * Describes the state of the abstracted input system.

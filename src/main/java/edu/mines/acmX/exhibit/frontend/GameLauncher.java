@@ -1,25 +1,25 @@
-package edu.mines.csci598.recycler.frontend;
+package edu.mines.acmX.exhibit.frontend;
+import java.awt.Graphics2D;
+import java.util.ArrayList;
 
-import edu.mines.csci598.recycler.backend.GameManager;
-import edu.mines.csci598.recycler.backend.GameState;
-import edu.mines.csci598.recycler.backend.ModalMouseMotionInputDriver;
-import edu.mines.csci598.recycler.bettyCrocker.Song;
-import edu.mines.csci598.recycler.bettyCrocker.Track;
-import edu.mines.csci598.recycler.frontend.graphics.GameScreen;
-import edu.mines.csci598.recycler.frontend.graphics.InstructionScreen;
-import edu.mines.csci598.recycler.frontend.graphics.PlayerOptionsScreen;
-import edu.mines.csci598.recycler.frontend.hands.Hand;
-import edu.mines.csci598.recycler.frontend.hands.PlayerHand;
-import edu.mines.csci598.recycler.frontend.items.PowerUp;
-import edu.mines.csci598.recycler.frontend.items.RecyclableType;
-import edu.mines.csci598.recycler.frontend.motion.ConveyorBelt;
-import edu.mines.csci598.recycler.frontend.motion.FeedbackDisplay;
-import edu.mines.csci598.recycler.frontend.utils.GameConstants;
-import edu.mines.csci598.recycler.frontend.utils.PlayerMode;
 import org.apache.log4j.Logger;
 
-import java.awt.*;
-import java.util.ArrayList;
+import edu.mines.acmX.exhibit.backend.GameManager;
+import edu.mines.acmX.exhibit.backend.GameState;
+import edu.mines.acmX.exhibit.frontend.graphics.GameScreen;
+import edu.mines.acmX.exhibit.frontend.graphics.InstructionScreen;
+import edu.mines.acmX.exhibit.frontend.graphics.PlayerOptionsScreen;
+import edu.mines.acmX.exhibit.frontend.hands.PlayerHand;
+import edu.mines.acmX.exhibit.frontend.items.PowerUp;
+import edu.mines.acmX.exhibit.frontend.items.RecyclableType;
+import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
+import edu.mines.acmX.exhibit.frontend.motion.FeedbackDisplay;
+import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
+import edu.mines.acmX.exhibit.frontend.utils.PlayerMode;
+import edu.mines.acmX.exhibit.input_services.mouse.ModalMouseMotionInputDriver;
+import edu.mines.acmX.exhibit.stdlib.input_processing.tracking.Hand;
+import edu.mines.acmX.exhibit.stdlib.sound.Song;
+import edu.mines.acmX.exhibit.stdlib.sound.Track;
 
 
 /**

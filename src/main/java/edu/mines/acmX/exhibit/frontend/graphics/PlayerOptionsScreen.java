@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.graphics;
+package edu.mines.acmX.exhibit.frontend.graphics;
 
 import edu.mines.csci598.recycler.backend.GameManager;
 import edu.mines.csci598.recycler.frontend.hands.Hand;

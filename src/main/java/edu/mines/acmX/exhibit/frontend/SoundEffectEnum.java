@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend;
+package edu.mines.acmX.exhibit.frontend;
 
 import org.apache.log4j.Logger;
 

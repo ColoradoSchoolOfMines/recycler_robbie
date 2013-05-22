@@ -1,4 +1,4 @@
-package edu.mines.csci598.recycler.frontend.items;
+package edu.mines.acmX.exhibit.frontend.items;
 
 import edu.mines.csci598.recycler.frontend.utils.GameConstants;
 import edu.mines.csci598.recycler.frontend.RecycleBin;
