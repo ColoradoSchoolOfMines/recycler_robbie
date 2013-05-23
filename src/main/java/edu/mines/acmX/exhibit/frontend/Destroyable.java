@@ -1,4 +1,4 @@
-package edu.mines.acmX.exhibit.backend;
+package edu.mines.acmX.exhibit.frontend;
 
 /**
  * Describes a resource that needs to be manually released.

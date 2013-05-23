@@ -1,15 +1,14 @@
-package edu.mines.acmX.exhibit.frontend;
+package edu.mines.acmX.exhibit.frontend.items;
 
 import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.frontend.items.MotionState;
-import edu.mines.acmX.exhibit.frontend.items.Recyclable;
-import edu.mines.acmX.exhibit.frontend.items.RecyclableType;
+import edu.mines.acmX.exhibit.frontend.Side;
 import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
 import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.sound.SoundEffectEnum;
 
 /**
  * Created with IntelliJ IDEA.

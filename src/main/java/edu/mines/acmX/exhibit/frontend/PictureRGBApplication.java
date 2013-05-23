@@ -2,7 +2,7 @@
 TODO: Make this one of thos emini modules on friday 24
 */
 
-package edu.mines.acmX.exhibit.backend;
+package edu.mines.acmX.exhibit.frontend;
 
 import javax.swing.*;
 

@@ -1,7 +1,9 @@
-package edu.mines.acmX.exhibit.backend;
+package edu.mines.acmX.exhibit.frontend.sound;
 
 import java.util.*;
 import javax.sound.sampled.*;
+
+import edu.mines.acmX.exhibit.frontend.GameManager;
 
 /**
  * Performs mixing of audio and logical inversion of the audio system.

@@ -1,11 +1,11 @@
-package edu.mines.acmX.exhibit.frontend;
+package edu.mines.acmX.exhibit.frontend.items;
 
 import org.apache.log4j.Logger;
 
+import edu.mines.acmX.exhibit.frontend.Side;
 import edu.mines.acmX.exhibit.frontend.graphics.Displayable;
-import edu.mines.acmX.exhibit.frontend.items.Recyclable;
-import edu.mines.acmX.exhibit.frontend.items.RecyclableType;
 import edu.mines.acmX.exhibit.frontend.motion.Movable;
+import edu.mines.acmX.exhibit.frontend.sound.SoundEffectEnum;
 import edu.mines.acmX.exhibit.stdlib.graphics.Sprite;
 
 /**

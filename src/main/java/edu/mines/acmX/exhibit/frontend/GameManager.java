@@ -1,4 +1,4 @@
-package edu.mines.acmX.exhibit.backend;
+package edu.mines.acmX.exhibit.frontend;
 
 import java.awt.Component;
 import java.awt.Frame;

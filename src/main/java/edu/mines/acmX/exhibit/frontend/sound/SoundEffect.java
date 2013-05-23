@@ -1,4 +1,4 @@
-package edu.mines.acmX.exhibit.bettyCrocker;
+package edu.mines.acmX.exhibit.frontend.sound;
 
 import java.io.File;
 import java.io.IOException;

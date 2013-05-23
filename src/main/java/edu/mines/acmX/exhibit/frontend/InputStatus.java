@@ -1,4 +1,4 @@
-package edu.mines.acmX.exhibit.backend;
+package edu.mines.acmX.exhibit.frontend;
 
 /**
  * Describes the state of the abstracted input system.

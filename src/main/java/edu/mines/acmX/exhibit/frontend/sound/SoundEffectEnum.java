@@ -1,8 +1,7 @@
-package edu.mines.acmX.exhibit.frontend;
+package edu.mines.acmX.exhibit.frontend.sound;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.bettyCrocker.SoundEffect;
 
 /**
  * Created with IntelliJ IDEA.

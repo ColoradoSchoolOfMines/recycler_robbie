@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.backend.GameManager;
-import edu.mines.acmX.exhibit.backend.GameState;
 import edu.mines.acmX.exhibit.frontend.graphics.GameScreen;
 import edu.mines.acmX.exhibit.frontend.graphics.InstructionScreen;
 import edu.mines.acmX.exhibit.frontend.graphics.PlayerOptionsScreen;
@@ -13,6 +11,7 @@ import edu.mines.acmX.exhibit.frontend.hands.Hand;
 import edu.mines.acmX.exhibit.frontend.hands.PlayerHand;
 import edu.mines.acmX.exhibit.frontend.items.PowerUp;
 import edu.mines.acmX.exhibit.frontend.items.RecyclableType;
+import edu.mines.acmX.exhibit.frontend.items.RecycleBins;
 import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
 import edu.mines.acmX.exhibit.frontend.motion.FeedbackDisplay;
 import edu.mines.acmX.exhibit.frontend.utils.GameConstants;

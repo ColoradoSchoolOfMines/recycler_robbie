@@ -10,7 +10,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.backend.GameManager;
+import edu.mines.acmX.exhibit.frontend.GameManager;
 import edu.mines.acmX.exhibit.frontend.hands.Hand;
 import edu.mines.acmX.exhibit.frontend.hands.PlayerHand;
 import edu.mines.acmX.exhibit.frontend.utils.PlayerMode;

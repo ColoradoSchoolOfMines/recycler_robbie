@@ -2,8 +2,8 @@ package edu.mines.acmX.exhibit.frontend.items;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.frontend.SoundEffectEnum;
 import edu.mines.acmX.exhibit.frontend.graphics.ResourceManager;
+import edu.mines.acmX.exhibit.frontend.sound.SoundEffectEnum;
 
 public enum RecyclableType {
 

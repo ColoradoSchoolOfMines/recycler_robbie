@@ -2,7 +2,7 @@ package edu.mines.acmX.exhibit.frontend.hands;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.backend.GameManager;
+import edu.mines.acmX.exhibit.frontend.GameManager;
 import edu.mines.acmX.exhibit.frontend.graphics.GraphicsConstants;
 import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;
 

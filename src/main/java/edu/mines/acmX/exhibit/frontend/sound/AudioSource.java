@@ -1,4 +1,4 @@
-package edu.mines.acmX.exhibit.backend;
+package edu.mines.acmX.exhibit.frontend.sound;
 
 /**
  * Represents a source of audio data, conforming to AudioPlayer.FORMAT.

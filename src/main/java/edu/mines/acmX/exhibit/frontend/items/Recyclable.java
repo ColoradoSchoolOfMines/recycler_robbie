@@ -4,8 +4,6 @@ import java.util.Random;
 
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.frontend.RecycleBin;
-import edu.mines.acmX.exhibit.frontend.RecycleBins;
 import edu.mines.acmX.exhibit.frontend.graphics.Displayable;
 import edu.mines.acmX.exhibit.frontend.graphics.Line;
 import edu.mines.acmX.exhibit.frontend.graphics.Path;

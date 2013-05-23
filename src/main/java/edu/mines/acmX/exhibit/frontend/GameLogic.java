@@ -11,10 +11,13 @@ import edu.mines.acmX.exhibit.frontend.hands.Hand;
 import edu.mines.acmX.exhibit.frontend.items.ItemFactory;
 import edu.mines.acmX.exhibit.frontend.items.PowerUp;
 import edu.mines.acmX.exhibit.frontend.items.Recyclable;
+import edu.mines.acmX.exhibit.frontend.items.RecycleBin;
+import edu.mines.acmX.exhibit.frontend.items.RecycleBins;
 import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
 import edu.mines.acmX.exhibit.frontend.motion.FeedbackDisplay;
 import edu.mines.acmX.exhibit.frontend.motion.Movable;
 import edu.mines.acmX.exhibit.frontend.motion.TheForce;
+import edu.mines.acmX.exhibit.frontend.sound.SoundEffectEnum;
 import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
 
 /**

@@ -6,8 +6,6 @@ import java.util.Random;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import edu.mines.acmX.exhibit.frontend.RecycleBin;
-import edu.mines.acmX.exhibit.frontend.RecycleBins;
 import edu.mines.acmX.exhibit.frontend.graphics.Line;
 import edu.mines.acmX.exhibit.frontend.graphics.Path;
 import edu.mines.acmX.exhibit.frontend.hands.ComputerHand;
@@ -15,6 +13,8 @@ import edu.mines.acmX.exhibit.frontend.items.MotionState;
 import edu.mines.acmX.exhibit.frontend.items.PowerUp;
 import edu.mines.acmX.exhibit.frontend.items.Recyclable;
 import edu.mines.acmX.exhibit.frontend.items.RecyclableType;
+import edu.mines.acmX.exhibit.frontend.items.RecycleBin;
+import edu.mines.acmX.exhibit.frontend.items.RecycleBins;
 import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
 import edu.mines.acmX.exhibit.frontend.motion.Movable;
 import edu.mines.acmX.exhibit.stdlib.graphics.Coordinate;

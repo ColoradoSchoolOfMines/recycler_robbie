@@ -4,7 +4,7 @@
 	full screen functionality.
 */
 
-package edu.mines.acmX.exhibit.backend;
+package edu.mines.acmX.exhibit.frontend;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
