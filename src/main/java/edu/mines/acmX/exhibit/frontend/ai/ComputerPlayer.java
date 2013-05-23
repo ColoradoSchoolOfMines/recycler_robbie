@@ -134,7 +134,6 @@ public class ComputerPlayer {
                 followPath(currentTimeSec);
             }
         }
-        System.out.println("Computer Hand @ (" + primary.getX() + ", " +primary.getY() + ")");
     }
 
     /**
