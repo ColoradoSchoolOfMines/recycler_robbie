@@ -1,18 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>edu.mines.acmX.exhibit</groupId>
-  <artifactId>recycler_robbie</artifactId>
-  <version>0.0.1</version>
-  <packaging>jar</packaging>
+	<groupId>edu.mines.acmX.exhibit</groupId>
+	<artifactId>recycler_robbie</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
 
-  <name>recycler_robbie</name>
-  <url>http://maven.apache.org</url>
+	<name>recycler_robbie</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<repositories>
+		<!-- This repo just hosts 3rd party jar files wrapped up as mavens -->
+		<repository>
+			<url>https://s3-us-west-2.amazonaws.com/jar.download.andrewdemaria.com/libs</url>
+			<id>additional_libraries</id>
+		</repository>
+		<!-- This repo holds the releases for the interface sdk library -->
+		<repository>
+			<url>https://s3-us-west-2.amazonaws.com/acmx.mines.edu/release</url>
+			<id>interface_sdk_library</id>
+		</repository>
+	</repositories>
 
   <dependencies>
     <dependency>
@@ -23,23 +36,19 @@
     </dependency>
     <dependency>
     	<groupId>edu.mines.acmX.exhibit</groupId>
-    	<artifactId>interfacesdk</artifactId>
-    	<version>0.0.1</version>
-    	<scope>system</scope>
-    	<systemPath>${project.basedir}/lib/interfacesdk-0.0.1.jar</systemPath>
-    </dependency>
-    <dependency>
-    	<groupId>log4j</groupId>
-    	<artifactId>log4j</artifactId>
-    	<version>1.2.14</version>
-    </dependency>
-    <dependency>
-    	<groupId>openni</groupId>
-    	<artifactId>openni</artifactId>
-    	<version>1.5.4.0</version>
-    	<scope>system</scope>
-    	<systemPath>${project.basedir}/lib/org.OpenNI.jar</systemPath>
-    </dependency>
+		<artifactId>interfacesdk</artifactId>
+		<version>0.0.1</version>
+	</dependency>
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.14</version>
+	</dependency>
+	<dependency>
+		<groupId>org.OpenNI</groupId>
+		<artifactId>OpenNI</artifactId>
+		<version>1.5.4.0</version>
+	</dependency>
   </dependencies>
 	<build>
 		<plugins>

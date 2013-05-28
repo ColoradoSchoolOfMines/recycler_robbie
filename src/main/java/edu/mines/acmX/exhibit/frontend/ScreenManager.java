@@ -6,11 +6,21 @@
 
 package edu.mines.acmX.exhibit.frontend;
 
-import java.awt.*;
+import java.awt.DisplayMode;
+import java.awt.EventQueue;
+import java.awt.Graphics2D;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Toolkit;
+import java.awt.Window;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.lang.reflect.InvocationTargetException;
-import javax.swing.*;
+
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.RepaintManager;
 
 /* This is an older piece of code which manages most of the headaches involved
  * in setting full-screen windows in Java and managing their graphics. With a

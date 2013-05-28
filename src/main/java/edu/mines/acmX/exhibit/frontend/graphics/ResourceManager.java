@@ -1,13 +1,16 @@
 package edu.mines.acmX.exhibit.frontend.graphics;
 
-import org.apache.log4j.Logger;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+
+import javax.imageio.ImageIO;
+
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -42,11 +45,12 @@ public class ResourceManager {
      * @return
      */
     public Image getImage(String key) {
+    	key = key.replaceFirst("src/main/", "");
         //If we don't have the image go create it and put it here.
         if(!imageMap.containsKey(key)) {
             BufferedImage img;
             try {
-                img = ImageIO.read(new File(key));
+                img = ImageIO.read(ResourceManager.class.getClassLoader().getResourceAsStream(key));
             } catch (IOException e) {
                 throw new RuntimeException("File error: " + key);
             }

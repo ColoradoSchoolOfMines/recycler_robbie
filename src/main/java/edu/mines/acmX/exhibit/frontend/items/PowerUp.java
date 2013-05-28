@@ -1,7 +1,5 @@
 package edu.mines.acmX.exhibit.frontend.items;
 
-import java.awt.geom.Point2D;
-
 import org.apache.log4j.Logger;
 
 import edu.mines.acmX.exhibit.frontend.graphics.Displayable;

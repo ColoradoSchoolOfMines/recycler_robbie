@@ -1,6 +1,6 @@
 package edu.mines.acmX.exhibit.frontend;
 
-import java.awt.*;
+import java.awt.Graphics2D;
 
 import edu.mines.acmX.exhibit.input_services.InputEvent;
 import edu.mines.acmX.exhibit.input_services.InputReceiver;

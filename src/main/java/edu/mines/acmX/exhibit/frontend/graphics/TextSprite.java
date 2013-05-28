@@ -1,6 +1,7 @@
 package edu.mines.acmX.exhibit.frontend.graphics;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
 
 import org.apache.log4j.Logger;
 

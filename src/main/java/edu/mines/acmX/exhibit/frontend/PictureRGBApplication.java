@@ -4,15 +4,16 @@ TODO: Make this one of thos emini modules on friday 24
 
 package edu.mines.acmX.exhibit.frontend;
 
-import javax.swing.*;
-
-import edu.mines.acmX.exhibit.stdlib.input_processing.imaging.PictureRGB;
-
-import java.awt.image.BufferedImage;
-import java.awt.*;
-
+import java.awt.Container;
+import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import edu.mines.acmX.exhibit.stdlib.input_processing.imaging.PictureRGB;
 
 public class PictureRGBApplication extends JPanel {
     PictureRGB prgb;

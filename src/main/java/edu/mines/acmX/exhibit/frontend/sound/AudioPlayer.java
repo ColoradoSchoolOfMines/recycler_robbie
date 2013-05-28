@@ -1,7 +1,11 @@
 package edu.mines.acmX.exhibit.frontend.sound;
 
-import java.util.*;
-import javax.sound.sampled.*;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.SourceDataLine;
 
 import edu.mines.acmX.exhibit.frontend.GameManager;
 

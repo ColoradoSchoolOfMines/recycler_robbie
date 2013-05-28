@@ -16,8 +16,6 @@ import edu.mines.acmX.exhibit.frontend.motion.ConveyorBelt;
 import edu.mines.acmX.exhibit.frontend.motion.FeedbackDisplay;
 import edu.mines.acmX.exhibit.frontend.utils.GameConstants;
 import edu.mines.acmX.exhibit.frontend.utils.PlayerMode;
-import edu.mines.acmX.exhibit.input_services.mouse.ModalMouseMotionInputDriver;
-import edu.mines.acmX.exhibit.input_services.openni.OpenNIHandTrackerInputDriver;
 import edu.mines.acmX.exhibit.stdlib.sound.Song;
 
 
@@ -172,16 +170,7 @@ public class GameLauncher extends GameState {
         }
 	}
 
-	public static void main(String[] args) {
-        GameManager gameManager = new GameManager("Recycler", true);
-        GameLauncher gameLauncher = new GameLauncher(gameManager);
-		ModalMouseMotionInputDriver mouse = new ModalMouseMotionInputDriver();
-        OpenNIHandTrackerInputDriver kinect = new OpenNIHandTrackerInputDriver();
-        gameLauncher.getGameManager().installInputDriver(kinect);
-		gameLauncher.getGameManager().setState(gameLauncher);
-		gameLauncher.getGameManager().run();
-        gameLauncher.getGameManager().destroy();
-	}
+
 
 }
 
